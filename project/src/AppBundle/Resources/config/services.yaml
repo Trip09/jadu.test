@@ -3,14 +3,3 @@ services:
     class: 'GuzzleHttp\Client'
     arguments:
       - [{timeout: 5, allow_redirects: true}]
-
-  app.wordpress_api_client:
-    class: 'AppBundle\Client\WordpressApiClient'
-    arguments:
-      - '@monolog.logger.app.command'
-      - '@app.http_client'
-
-  service.post:
-    class: 'AppBundle\Service\PostService'
-    arguments:
-       - '@doctrine.orm.default_entity_manager'

@@ -1,8 +1,3 @@
-sonata_doctrine_orm_admin:
-  templates:
-    form:
-      - AppBundle:Form/Admin:form_admin_fields.html.twig
-
 sonata_admin:
     title: 'Jadu RSS Test'
     title_logo: 'https://yt3.ggpht.com/-CGO7xSSjMxE/AAAAAAAAAAI/AAAAAAAAAAA/VOT954jlgiY/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg'

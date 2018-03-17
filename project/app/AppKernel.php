@@ -34,7 +34,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
 
             // Extra
-            //            new Fkr\SimplePieBundle\FkrSimplePieBundle(),
+            new Debril\RssAtomBundle\DebrilRssAtomBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
