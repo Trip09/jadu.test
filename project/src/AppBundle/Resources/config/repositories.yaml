@@ -1,0 +1,6 @@
+services:
+    feed.repository:
+        class: AppBundle\Repository\FeedDoctrine
+        factory:   ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - AppBundle\Model\Feed

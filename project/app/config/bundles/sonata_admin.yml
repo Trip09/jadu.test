@@ -1,0 +1,30 @@
+sonata_doctrine_orm_admin:
+  templates:
+    form:
+      - AppBundle:Form/Admin:form_admin_fields.html.twig
+
+sonata_admin:
+    title: 'Jadu RSS Test'
+    title_logo: 'https://yt3.ggpht.com/-CGO7xSSjMxE/AAAAAAAAAAI/AAAAAAAAAAA/VOT954jlgiY/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg'
+
+    # set to true to persist filter settings per admin module in the user's session
+    persist_filters: true
+
+    options:
+        html5_validate: false # does not use html5 validation
+        pager_links: 5 # pager max links to display
+        use_icheck: false
+
+    templates:
+        layout:               AppBundle:Admin:layout.html.twig
+        outer_list_rows_list: AppBundle:Admin/CRUD:list_outer_rows_list.html.twig
+        user_block:           AppBundle:Admin/Block:user_block.html.twig
+
+    dashboard:
+        groups:
+            admin.group.emails:
+                label:           'menu.admin.rss'
+                label_catalogue: messages
+                icon:            '<i class="fa fa-rss-square"></i>'
+                items:
+                    - app.admin.feed

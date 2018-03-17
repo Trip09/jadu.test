@@ -1,0 +1,5 @@
+fkr_simple_pie:
+    cache_enabled: false
+    cache_dir: %kernel.cache_dir%/rss
+    cache_duration: false
+    idna_converter: ~ #default is false

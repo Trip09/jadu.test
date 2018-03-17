@@ -1,0 +1,33 @@
+AppBundle\Model\Feed:
+  table: feed
+  type:  entity
+  changeTrackingPolicy: DEFERRED_EXPLICIT
+  repositoryClass: AppBundle\Repository\FeedDoctrine
+
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+
+  fields:
+    name:
+      type: string
+
+    rssUrl:
+      type: text
+      column: rss_url
+
+    createdAt:
+      type: datetime
+      column: created_at
+      gedmo:
+        timestampable:
+          on: create
+
+    updatedAt:
+      type: datetime
+      column: updated_at
+      gedmo:
+        timestampable:
+          on: update

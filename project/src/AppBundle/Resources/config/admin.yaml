@@ -1,0 +1,9 @@
+services:
+  app.admin.feed:
+    class: AppBundle\Model\Admin\FeedAdmin
+    arguments:
+      - ~
+      - AppBundle\Model\Feed
+      - AppBundle:Admin\Feed
+    tags:
+     - { name: sonata.admin, manager_type: orm, group: Admin, label: "menu.admin.feed" }
